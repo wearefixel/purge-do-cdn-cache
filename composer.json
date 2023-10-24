@@ -1,0 +1,29 @@
+{
+    "name": "fixel/purge-do-cdn-cache",
+    "autoload": {
+        "psr-4": {
+            "Fixel\\PurgeDoCdnCache\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Purge DigitalOcean CDN Cache"
+        },
+        "laravel": {
+            "providers": [
+                "Fixel\\PurgeDoCdnCache\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "graham-campbell/digitalocean": "^10.2",
+        "toin0u/digitalocean-v2": "^4.8",
+        "guzzlehttp/guzzle": "^7.8",
+        "http-interop/http-factory-guzzle": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
