@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-2">
+  <div class="flex gap-3">
     <button
       v-for="(config, endpoint) in endpoints"
       v-bind:key="origin"
