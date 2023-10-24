@@ -22,7 +22,7 @@ class ServiceProvider extends AddonServiceProvider
                 ->name('fixel.purge-do-cdn-cache.')
                 ->group(function () {
                     Route::get('/cdns', [Controller::class, 'cdns'])->name('cdns');
-                    Route::get('/cdns/{origin}/purge', [Controller::class, 'purge'])->name('purge');
+                    Route::post('/cdns/{origin}/purge', [Controller::class, 'purge'])->name('purge');
                 });
         });
 

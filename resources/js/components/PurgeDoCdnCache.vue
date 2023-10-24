@@ -24,7 +24,7 @@ export default {
   methods: {
     clear(origin) {
       this.$axios
-        .get(cp_url("fixel/purge-do-cdn-cache/cdns/" + origin))
+        .post(cp_url(`fixel/purge-do-cdn-cache/cdns/${origin}/purge`))
         .catch((error) => {
           this.$toast.error("There was an error");
         })
